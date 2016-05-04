@@ -1,1 +1,47 @@
-<p>This is the partial for view 1.</p>
+<div class="row-fluid">
+    <form class="form form-horizontal" name="addDetails">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="firstNameInput">First Name * </label>
+
+                    <div class="controls">
+                        <input class="input-large" id="firstNameInput" name="firstNameInput" type="text" required>
+
+                            <div ng-show="addDetails.firstNameInput.$error.required && firstNameInput.$dirty">
+                                <p><i class="icon icon-warning-sign"></i>Please enter a first name</p>
+                            </div>
+                    </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="firstNameInput">Last Name * </label>
+
+                    <div class="controls">
+                        <input class="input-large" id="lastNameInput" name="lastNameInput" type="text" required>
+
+                            <div ng-show="addDetails.lastNameInput.$dirty">
+                                <p><i class="icon icon-warning-sign"></i>Please enter a last name</p>
+                            </div>
+                    </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="contactPhone">Contact Phone </label>
+                    <div class="controls">
+                        <input class="input-large" id="contactPhone" name="contactPhone" type="tel">
+                    </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="contactEmail">Contact Email* </label>
+                    <div class="controls">
+                        <input class="input-large" id="contactEmail" name="contactEmail" type="email">
+                    </div>
+                <p class="required-fields">(*required fields)</p>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button name="saveBtn" ng-click="addNewEvent()" ng-disabled="addEvent.$invalid" class="btn btn-large btn-primary" >Save</button>
+                    <a href="#/" name="cancelBtn" class="btn btn-large btn-danger">Cancel</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
